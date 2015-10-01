@@ -1,0 +1,86 @@
+/* CSS Document */
+body
+{
+	overflow-x:hidden;
+}
+
+body.mobile-menu-active
+{
+	overflow-y:hidden;
+}
+
+#mobile-menu
+{
+	display:none;
+	position:fixed;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+	z-index:200;
+	&>.mobile-menu
+	{
+		background-color:#C70D10;
+		left:50px;
+		z-index:2;
+	}
+	ul
+	{
+		list-style:none inside;
+		margin-left:0;
+		padding-left:0;
+		li
+		{
+			a
+			{
+				display:block;
+				font-weight:bold;
+				padding:10px 20px;
+			}
+			.menu-wrapper
+			{
+				display:none;
+			}
+		}
+	}
+	.mobile-menu
+	{
+		&,a
+		{
+			color:#FFF;
+		}
+		position:absolute;
+		top:0;
+		bottom:0;
+		right:0;
+		padding:0 10px;
+		text-transform:uppercase;
+		
+		.menu-header
+		{
+			padding:10px 0;
+			button
+			{
+				border:none;
+				background-color:transparent;
+				font-size:18px;
+				&:before
+				{
+					.fa();
+					content:'\f0c9';
+					color:#5D0406;
+				}
+			}
+		}
+	}
+	.overlay
+	{
+		position:absolute;
+		z-index:1;
+		background-color:rgba(0,0,0,.2);
+		left:0;
+		right:0;
+		top:0;
+		bottom:0;
+	}
+}

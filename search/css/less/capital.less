@@ -1,0 +1,312 @@
+@font-face
+{
+	font-family: freeroad;
+	src: url("../fonts/Freeroad.eot") /* EOT file for IE *'/
+	/** */
+}
+
+.fa()
+{
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body
+{
+	background-color:#FFF;
+	font-family: 'Roboto', sans-serif;
+}
+
+@max-page-width : 1000px;
+
+.sc()
+{
+	max-width:@max-page-width;
+	margin:0 auto;
+}
+.sc
+{
+	.sc();
+	
+	.sc-content
+	{
+		padding:10px;
+		background-color:#FFF;
+		@media (max-width: @grid-float-breakpoint)
+		{
+			padding:0;
+		}
+	}
+}
+
+#masthead
+{
+	background-color:#DD1B1C;
+	
+	.site-branding
+	{
+		&,
+		a
+		{
+			color:#FFF;
+			font-weight:bold;
+			text-decoration:none;
+		}
+		h1
+		{
+			margin:0;
+			text-transform:uppercase;
+		}
+	}
+}
+#masthead
+{
+	.site-title
+	{
+		padding:10px 0;
+	}
+	.site-branding
+	{
+		display:none;
+		@media (min-width: @grid-float-breakpoint)
+		{
+			display:block;
+		}
+	}
+	.capital-logo
+	{
+		display:block;
+		width:250px;
+		height:45px;
+		background-image: url(../images/logo.png);
+		background-repeat: no-repeat;
+		background-position: 0px 0px;
+	}
+	
+}
+
+
+#main-navigation
+{
+	position:relative;
+	z-index:100;
+	padding: 0;
+	margin: 0;
+	.capital-logo-mini
+	{
+		@ratio:(192/32);
+		display:block;
+		width:150px;
+		height:(150px/@ratio);
+		background-image: url(../images/logo-mobile.png);
+		background-repeat: no-repeat;
+		background-position: 0px 0px;
+		background-size:100% 100%;
+	}
+	@media (min-width: @grid-float-breakpoint)
+	{
+		.navbar-brand
+		{
+			overflow:hidden;
+			width:0;
+			padding-left:0;
+			padding-right:0;
+		}
+	}
+	#main-navbar-collapse
+	{
+		margin-left:-5px;
+	}
+}
+#colophon
+{
+	background-color:#262626;
+	font-size:12px;
+	ul
+	{
+		margin-left:0;
+		padding-left:0;
+		list-style:none;
+		list-style-position:inside;
+	}
+	.site-info
+	{
+		padding:5px 0;
+		position:relative;
+		img
+		{
+			display:block;
+		}
+		&>div
+		{
+			position:relative;
+			.clearfix();
+		}
+		
+		&:after
+		{
+			position:absolute;
+			content:'';
+			bottom:0;
+			right:0;
+			//left:30px;
+			width:100%;
+			@media (min-width: @grid-float-breakpoint)
+			{
+				width:75%;
+			}
+			border-bottom:#676767 1px solid;
+		}
+		.to-top
+		{
+			text-transform:uppercase;
+			float:right;
+			position:relative;
+			a
+			{
+				color:#FFF;
+				display:block;
+				position:relative;
+				padding-right:15px;
+				
+				&:after
+				{
+					.fa();
+					content:'\f0d8';
+					position:absolute;
+					right:0;
+					color:#F00;
+					font-size:18px;
+				}
+			}
+		}
+	}
+	.site-links
+	{
+		//min-height:500px;
+		padding: 10px;
+		@media (min-width: @grid-float-breakpoint)
+		{
+			padding:0;					
+		}
+		a
+		{
+			color:#FFF;
+			&:hover
+			{
+				text-decoration:underline;
+			}
+		}
+		h3
+		{
+			&,
+			a
+			{
+				color:#FFFC00;
+				font-weight:bold;
+				font-size:14px;
+				text-transform:uppercase;
+			}
+			margin:10px 0;
+		}
+		ul
+		{
+			ul
+			{
+				padding-left:10px;
+			}
+		}
+		
+		.badge-holder
+		{
+			position:relative;
+			.mik-badge
+			{
+				position:relative;
+				width:102px;
+				height:110px;
+				background-image: url(../images/madeinkenya.png);
+				background-repeat: no-repeat;
+				background-position: 0px 0px;
+				background-size:100% 100%;
+			}
+		}
+		.capitalfm-logo
+		{
+			width:81px;
+			height:65px;
+			background-image: url(../images/cfm-logo.png);
+			background-repeat: no-repeat;
+			background-position: 0px 0px;
+			background-size:100% 100%;
+			margin-bottom:20px;
+		}
+	}	
+	.site-credit
+	{
+		padding:12px 0;
+		background-color:#000;
+		&,
+		a
+		{
+			color:#A2A2A2;
+			font-size:11px;
+		}
+		.copyright		
+		{
+			padding:0 10px;
+			@media (min-width: @grid-float-breakpoint)
+			{
+				padding:0;					
+			}
+			&:hover
+			{
+				color:#FFF;
+			}
+		}
+		ul
+		{
+			li
+			{
+				a
+				{
+					padding:5px 10px;
+					&:hover
+					{
+						color:#FFF;
+					}
+				}
+			}
+			@media (min-width: @grid-float-breakpoint)
+			{
+				.clearfix();
+				li
+				{
+					float:left;
+					position:relative;
+					a
+					{
+						padding:0 5px;
+					}
+					&:after
+					{
+						content:'';
+						position:absolute;
+						top:3px;
+						bottom:3px;
+						right:0;
+						border-right:solid 1px #A2A2A2;
+					}
+					&:last-child:after
+					{
+						display:none;
+					}
+				}
+			}
+		}
+	}
+}

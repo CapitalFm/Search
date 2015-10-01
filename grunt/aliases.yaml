@@ -1,0 +1,16 @@
+default:
+  description: 'Default (production) build'
+  tasks:
+    - dist
+dist:
+  description: 'Create production copy plugin'
+  tasks:
+    - 'concurrent:copyTheme'
+css:
+  description: 'Build Css'
+  tasks:
+    - 'less'
+createjs:
+  description: 'Compile javascript files'
+  tasks:
+    - 'closureBuilder'

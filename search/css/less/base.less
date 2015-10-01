@@ -1,0 +1,63 @@
+
+
+#content
+{
+	min-height:400px;
+	margin:20px auto;
+	max-width:@max-page-width;
+}
+
+#content
+{
+	/**
+	 * Customise the google search result color and fix buttons that are collapsed
+	 */
+	.gsc-selected-option-container
+	{
+		width:auto !important;
+	}
+	.gs-web-image-box,
+	.gs-promotion-image-box
+	{
+		width:auto !important;
+		
+		img
+		{
+			width:90px;
+			
+			@media (min-width: @grid-float-breakpoint)
+			{
+				width:180px;
+			}
+			max-width:none !important;
+			max-height:none !important;
+		}
+	}
+	
+	.gsc-table-result
+	{
+		.gs-title
+		{
+			&,
+			b
+			{
+				color:#DD1B1C;
+			}
+		}
+		.gsc-url-bottom
+		{
+			> div
+			{
+				color:#7b0100;
+			}
+		}
+	}
+	
+	.gsc-cursor
+	{
+		.gsc-cursor-page
+		{
+			color:#7b0100;
+		}
+	}
+}
