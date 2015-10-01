@@ -10,5 +10,5 @@ Currently uses Google's Custom Search
 
 https://developers.google.com/custom-search/docs/js/cselement-devguide
 
-We'll decide in the coming months whether to improve on this or come up with a completely different website.
+We'll decide in the coming months whether to improve on this or come up with an overhauled codebase. Probaly the latter. Nothing much to see or learn from here apart from usage of Node and grunt tools to come up with a project
 
