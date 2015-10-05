@@ -60,9 +60,9 @@ $site_title[] = "Capital FM";
                 <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-search"></i></a>
                   <div class="panel panel-default dropdown-menu">
                       <div class="panel-body">
-                        <form role="form">
+                        <form method="get" enctype="application/x-www-form-urlencoded" role="form">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search...">
+                                <input type="text" class="form-control" placeholder="Search..." name="q">
                           </div>
                               <button type="submit" class="btn btn-primary">Search</button>
                         </form>
@@ -83,12 +83,8 @@ $site_title[] = "Capital FM";
 	<div class="sc"></div>
 </div>
 <div id="page" class="hfeed site">
-	<div id="content" class="site-content">
-    
-    
-    <div id="cse" style="width:100%;"><gcse:searchresults-only></gcse:searchresults-only></div>
-    
-    
+	<div id="content" class="site-content">    
+    <div id="cse" style="width:100%;"><gcse:searchresults-only></gcse:searchresults-only></div>    
     </div><!-- .site-content -->
 </div><!-- .site -->
 <div class="leaderboard-advertisement 980x110 footer">
